@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_below="@+id/tab_layout">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="96dp"
+        android:background="#ffffff"
+        android:layout_below="@id/recycle"
+        tools:ignore="NotSibling">
+        <androidx.cardview.widget.CardView
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:id="@+id/imageview"
+            app:cardCornerRadius="60dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="20dp">
+
+            <ImageView
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:scaleType="centerCrop"
+                android:id="@+id/imageview1thumb">
+
+            </ImageView>
+
+        </androidx.cardview.widget.CardView>
+        <TextView
+            android:layout_width="120dp"
+            android:layout_height="30dp"
+            android:textColor="#000000"
+            android:layout_toRightOf="@+id/imageview"
+            android:id="@+id/textviewname"
+            android:textSize="20sp"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="20dp">
+
+        </TextView>
+        <TextView
+            android:layout_width="80dp"
+            android:layout_height="30dp"
+
+            android:id="@+id/strid"
+
+            android:layout_toRightOf="@+id/textviewname"
+
+            android:textSize="12sp"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="75dp"
+            tools:ignore="UnknownId">
+
+        </TextView>
+
+        <TextView
+            android:id="@+id/textview3desc"
+            android:layout_width="140dp"
+            android:layout_height="30dp"
+
+            android:layout_below="@+id/textview"
+
+            android:layout_marginLeft="37dp"
+            android:layout_marginTop="20dp"
+            android:layout_toRightOf="@+id/imageview"
+
+
+            android:textSize="15sp"
+            tools:ignore="UnknownId">
+
+        </TextView>
+        <TextView
+            android:layout_width="80dp"
+            android:layout_height="30dp"
+
+            android:id="@+id/strname"
+
+            android:layout_below="@+id/textviewname"
+
+            android:textSize="12sp"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="75dp"
+            tools:ignore="UnknownId">
+
+        </TextView>
+
+
+
+    </RelativeLayout>
+</RelativeLayout>
