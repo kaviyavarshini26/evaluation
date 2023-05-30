@@ -1,0 +1,76 @@
+package com.example.foodlist;
+
+import androidx.room.Entity;
+import androidx.room.PrimaryKey;
+@Entity(tableName = "items")
+
+
+
+public class ItemEntity {
+
+
+
+        @PrimaryKey(autoGenerate = true)
+        private int id;
+
+        private String itemName;
+
+       private String itemImage;
+       private String itemDesc;
+    public ItemEntity(String itemName, String itemImage, String itemDesc) {
+        this.id = id;
+        this.itemName = itemName;
+        this.itemImage=itemImage;
+        this.itemDesc=itemDesc;
+
+
+    }
+
+
+    public String getItemImage() {
+        return itemImage;
+    }
+
+    public void setItemImage(String itemImage) {
+        this.itemImage = itemImage;
+    }
+
+    public String getItemDesc() {
+        return itemDesc;
+    }
+
+    public void setItemDesc(String itemDesc) {
+        this.itemDesc = itemDesc;
+    }
+
+
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public String getItemName() {
+        return itemName;
+    }
+
+
+    public void setItemName(String itemName) {
+        this.itemName = itemName;
+    }
+
+//    public String getItemImage(){return itemImage;}
+//
+//    public void setItemImage(String itemImage){this.itemImage=itemImage;}
+
+//    public String getItemDesc(){return itemDesc;}
+//
+//    public void setItemDesc(String itemDesc){this.itemDesc=itemDesc;}
+
+
+
+    }
+
