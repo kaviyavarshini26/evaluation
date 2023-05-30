@@ -21,6 +21,9 @@ public class RemoteAdapter extends RecyclerView.Adapter<RemoteAdapter.ViewHolder
 
     private List<Category> remoteList;
     BottomsheetClickListnr bottomListner;
+//    private AppDatabase database;
+//    private ItemDao itemDao;
+
 //    private List<Category> foodItems;
 //    private ApiInterface apiInterface;
     Context context;
@@ -31,12 +34,8 @@ public class RemoteAdapter extends RecyclerView.Adapter<RemoteAdapter.ViewHolder
         this.context=context;
         this.remoteList = remoteList;
         this.bottomListner = listner;
-//        this.foodItems=foodItems;
-
-//        this.apiInterface=apiInterface;
-    }
-
-    public RemoteAdapter(List<Category> remotelist) {
+//        this.itemDao=itemDao;
+//        this.database=database;
     }
 
     void setData(List<Category> remoteList){
@@ -58,7 +57,7 @@ public class RemoteAdapter extends RecyclerView.Adapter<RemoteAdapter.ViewHolder
 //        holder.StrId.setText(remoteList.get(position).getIdCategory());
         //   holder.StrThumb.setImageResource(remoteList.get(position).getStrCategoryThumb());
         holder.StrName.setText(remoteList.get(position).getStrCategory());
-      holder.StrDesc.setText(remoteList.get(position).getStrCategoryDescription());
+   //   holder.StrDesc.setText(remoteList.get(position).getStrCategoryDescription());
 
 
         Glide.with(context)
@@ -71,6 +70,8 @@ public class RemoteAdapter extends RecyclerView.Adapter<RemoteAdapter.ViewHolder
             public void onClick(View v) {
                 // Open bottom sheet with description
                 bottomListner.onItemClicked(remoteList.get(position).getStrCategoryDescription());
+//                bottomListner.onItemClicked(remoteList.get(position).getStrCategory());
+//                bottomListner.onItemClicked(remoteList.get(position).getStrCategoryThumb());
             }
         });
     }
@@ -95,7 +96,7 @@ public class RemoteAdapter extends RecyclerView.Adapter<RemoteAdapter.ViewHolder
             super(itemView);
             StrThumb = itemView.findViewById(R.id.imageview1thumb);
            StrDesc = itemView.findViewById(R.id.textview3desc);
-            StrName = itemView.findViewById(R.id.strname);
+            StrName = itemView.findViewById(R.id.textview3desc);
 //            StrId = itemView.findViewById(R.id.strid);
 
         }
